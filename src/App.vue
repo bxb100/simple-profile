@@ -24,12 +24,12 @@
             ,
             <a class="hover:underline text-blue-500 dark:text-blue-400 after:content-['_↗']"
               href="https://github.com/bxb100">GitHub</a>
-            ,
+            or
             <a class="hover:underline text-blue-500 dark:text-blue-400 after:content-['_↗']"
               href="https://twitter.com/meili145">Twitter</a>
-            or
+            <!-- or
             <a class="hover:underline text-blue-500 dark:text-blue-400  after:content-['_↗']"
-              href="https://space.bilibili.com/4432478">哔哩哔哩</a>
+              href="https://space.bilibili.com/4432478">哔哩哔哩</a> -->
           </p>
           <p class="text-center tracking-normal text-slate-500 dark:text-slate-400">
             Mail me at <a class=" hover:underline" href="mailto:xiaobo@tomcat.run">
