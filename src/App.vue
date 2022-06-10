@@ -26,9 +26,6 @@
           </p>
           <p class=" text-center tracking-normal text-slate-500 dark:text-slate-400">
             Find me on
-            <a class="hover:underline font-bold decoration-lime-500"
-              href="https://blog.tomcat.run">Blog</a>
-            ,
             <a class="hover:underline font-bold decoration-sky-500"
               href="https://github.com/bxb100">GitHub</a>
             or
