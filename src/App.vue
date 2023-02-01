@@ -13,8 +13,8 @@
               src="./assets/dog.png" alt="dog head">
           </picture>
           <p class="leading-relaxed text-lg">Hello <span class="wave">👋</span>, 42 is an answer for everything.</p>
-          <p> <span>不闻不若闻之，闻之不若见之，见之不若知之，知之不若行之。学至于行之而止矣。</span></p>
-          <p class="invisible"><span>《荀子·儒效》</span></p>
+          <!--<p> <span>不闻不若闻之，闻之不若见之，见之不若知之，知之不若行之。学至于行之而止矣。</span></p>
+          <p class="invisible"><span>《荀子·儒效》</span></p>-->
           <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
           <h2 class="text-gray-900 dark:text-gray-300  font-medium title-font tracking-wider text-sm">XIAOBO</h2>
           <p class="text-gray-500 dark:text-gray-400">Developer</p>
@@ -28,7 +28,10 @@
             Find me on
             <a class="hover:underline font-bold decoration-sky-500"
               href="https://github.com/bxb100">GitHub</a>
-            or
+            /
+            <a class="hover:underline font-bold decoration-blue-500"
+              href="https://blog.tomcat.run">Blog</a>
+            /
             <a class="hover:underline font-bold decoration-blue-500"
               href="https://twitter.com/meili145">Twitter</a>
             <!-- or
