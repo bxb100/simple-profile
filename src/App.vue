@@ -34,6 +34,9 @@
             /
             <a class="hover:underline font-bold decoration-blue-500"
               href="https://twitter.com/meili145">Twitter</a>
+	    /
+	    <a class="hover:underline font-bold decoration-blue-500"
+	      href="https://bento.me/xiaobo">Bento</a>
             <!-- or
             <a class="underline"
               href="https://space.bilibili.com/4432478">哔哩哔哩</a> -->
