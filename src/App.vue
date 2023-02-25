@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {onMounted, ref} from "vue";
-import Typewriter from 'typewriter-effect/dist/core.js';
+import Typewriter from 'typewriter-effect/dist/core';
 
 const el = ref()
 
