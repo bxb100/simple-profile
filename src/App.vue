@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {onMounted, ref} from "vue";
-import Typewriter from 'typewriter-effect/dist/core';
+import Typewriter from 'typewriter-effect/dist/core.js';
 
 const el = ref()
 
@@ -13,7 +13,7 @@ onMounted(() => {
 		.typeString("<strong>42 is an answer for everything!</strong>")
 		.pauseFor(2000)
 		.deleteAll()
-		.typeString("busy write ")
+		.typeString("busy writing ")
 		.typeString("<strong>Java</strong> bug")
 		.pauseFor(2000)
 		.deleteChars(8)
@@ -34,7 +34,7 @@ onMounted(() => {
 					<picture>
 						<source srcset="./assets/dog.webp" type="image/webp">
 						<source srcset="./assets/dog.png" type="image/jpeg">
-						<img class=" rounded-b-full w-20 h-20 object-center inline-block mb-6 border-gray-200"
+						<img class="rounded-b-full w-20 h-20 object-center inline-block mb-6 border-gray-200"
 							 src="./assets/dog.png" alt="dog head">
 					</picture>
 					<p class="leading-relaxed text-lg">
