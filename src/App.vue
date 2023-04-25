@@ -10,7 +10,7 @@ onMounted(() => {
 		delay: 75
 	});
 	typewriter
-		.typeString("<strong>42 is an answer for everything!</strong>")
+		.typeString("<strong>42 is the answer for everything!</strong>")
 		.pauseFor(2000)
 		.deleteAll()
 		.typeString("busy writing ")
