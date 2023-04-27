@@ -58,12 +58,6 @@ onMounted(() => {
 						<a class="hover:underline font-bold decoration-blue-500"
 						   href="https://blog.tomcat.run">Blog</a>
 						/
-						<a class="hover:underline font-bold decoration-blue-500"
-						   href="https://bento.me/xiaobo">Bento</a>
-						/
-						<a class="hover:underline font-bold decoration-blue-500"
-						   href="https://twitter.com/meili145">Twitter</a>
-						/
 						<a class="hover:underline font-bold decoration-sky-500"
 						   href="https://github.com/bxb100">GitHub</a>
 					</p>
