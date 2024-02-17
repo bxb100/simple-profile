@@ -37,7 +37,7 @@ function toggleStarField() {
 <template>
   <main class="min-h-screen dark:bg-gray-900">
     <div id="app" ref="app" class="min-h-screen flex flex-col place-content-center">
-      <section class="text-gray-600 body-font dark:text-gray-300 w-full">
+      <section class="text-gray-600 body-font w-full">
         <div class="container px-5 py-24 mx-auto">
           <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
             <picture @mouseenter="toggleStarField" @mouseleave="toggleStarField">
