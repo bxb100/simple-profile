@@ -35,9 +35,10 @@ function toggleStarField() {
 </script>
 
 <template>
-  <main class="min-h-screen dark:bg-gray-900">
-    <div id="app" ref="app" class="min-h-screen flex flex-col place-content-center">
-      <section class="text-gray-600 body-font w-full">
+  <main class="dark:bg-gray-900">
+    <!-- if there no border, the Mac's chrome will display different background color (small opacity diff)-->
+    <div id="app" ref="app" class="w-screen h-screen border-2 dark:border-gray-900">
+      <section class="text-gray-600 w-full h-full flex content-center items-center  body-font ">
         <div class="container px-5 py-24 mx-auto">
           <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
             <picture @mouseenter="toggleStarField" @mouseleave="toggleStarField">
@@ -50,8 +51,6 @@ function toggleStarField() {
               Hello <span class="wave">👋</span>,
               <span ref="el"></span>
             </p>
-            <!--<p> <span>不闻不若闻之，闻之不若见之，见之不若知之，知之不若行之。学至于行之而止矣。</span></p>
-            <p class="invisible"><span>《荀子·儒效》</span></p>-->
             <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
             <h2 class="text-gray-900 dark:text-gray-300  font-medium title-font tracking-wider text-sm">XIAOBO</h2>
             <p class="text-gray-500 dark:text-gray-400">Developer</p>
@@ -137,7 +136,6 @@ https://twitter.com/KaAnDK/status/1729149373043610098
 https://codepen.io/amit_merchant/pen/MWPbaVG
  */
 #app.show {
-  height: 100%;
   background-size: 100% 100% !important;
   background: url("assets/starfield.svg") no-repeat center;
 }
