@@ -31,6 +31,20 @@ function toggleStarField() {
   app.value.classList.toggle('show')
 }
 
+onMounted(() => {
+  const controller = new AbortController()
+  const timeoutId = setTimeout(() => controller.abort(), 3000)
+  fetch("https://google.com", {mode: "no-cors", signal: controller.signal})
+      .then(() => {
+        console.log("fetch successful")
+      })
+      .catch(() => {
+        document.getElementById("footer")?.classList.remove("hidden")
+      })
+      .finally(() => {
+        clearTimeout(timeoutId)
+      })
+})
 
 </script>
 
@@ -38,7 +52,7 @@ function toggleStarField() {
   <main class="dark:bg-gray-900">
     <!-- if there no border, the Mac's chrome will display different background color (small opacity diff)-->
     <div id="app" ref="app" class="w-screen h-screen border-2 dark:border-gray-900">
-      <section class="text-gray-600 w-full h-full flex content-center items-center  body-font ">
+      <section class="text-gray-600 w-full h-full flex content-center items-center body-font">
         <div class="container px-5 py-24 mx-auto">
           <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
             <picture @mouseenter="toggleStarField" @mouseleave="toggleStarField">
@@ -47,7 +61,7 @@ function toggleStarField() {
               <img class="rounded-b-full w-20 h-20 object-center inline-block mb-6 border-gray-200"
                    src="./assets/dog.png" alt="dog head">
             </picture>
-            <p class="leading-relaxed text-lg">
+            <p class="leading-relaxed text-lg dark:text-slate-400">
               Hello <span class="wave">👋</span>,
               <span ref="el"></span>
             </p>
@@ -55,10 +69,10 @@ function toggleStarField() {
             <h2 class="text-gray-900 dark:text-gray-300  font-medium title-font tracking-wider text-sm">XIAOBO</h2>
             <p class="text-gray-500 dark:text-gray-400">Developer</p>
             <hr class=" m-8 ">
-            <p class="text-center tracking-normal text-slate-500 dark:text-slate-400">
-              Mail me at <a class=" hover:underline" href="mailto:xiaobo@tomcat.run">
-              xiaobo@tomcat.run
-            </a>
+            <p class=" tracking-normal text-slate-500 dark:text-slate-400">
+              <a class="hover:underline" href="mailto:john@tomcat.run">
+                john@tomcat.run
+              </a>
             </p>
             <p class=" text-center tracking-normal text-slate-500 dark:text-slate-400">
               Find me on
@@ -71,7 +85,7 @@ function toggleStarField() {
           </div>
         </div>
       </section>
-      <footer class="absolute bottom-1 left-0 right-0 w-36 mx-auto" aria-labelledby="footer-heading">
+      <footer class="absolute bottom-1 left-0 right-0 w-36 mx-auto hidden" aria-labelledby="footer-heading" id="footer">
         <h2 id="footer-heading" class="sr-only">Footer</h2>
         <div class="flex justify-center">
           <a class="text-xs leading-5 text-gray-500 dark:text-gray-400 hover:text-indigo-500  "
