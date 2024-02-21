@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { onBeforeMount, onMounted, ref } from "vue";
 import Typewriter from 'typewriter-effect/dist/core.js';
 
 const el = ref()
@@ -31,15 +31,17 @@ function toggleStarField() {
   app.value.classList.toggle('show')
 }
 
+const footer = ref()
+
 onMounted(() => {
   const controller = new AbortController()
-  const timeoutId = setTimeout(() => controller.abort(), 3000)
-  fetch("https://google.com", {mode: "no-cors", signal: controller.signal})
+  const timeoutId = setTimeout(() => controller.abort(), 800)
+  fetch("https://www.google.com", {mode: "no-cors", signal: controller.signal})
       .then(() => {
         console.log("fetch successful")
       })
       .catch(() => {
-        document.getElementById("footer")?.classList.remove("hidden")
+        footer.value.classList.remove("hidden")
       })
       .finally(() => {
         clearTimeout(timeoutId)
@@ -85,7 +87,7 @@ onMounted(() => {
           </div>
         </div>
       </section>
-      <footer class="absolute bottom-1 left-0 right-0 w-36 mx-auto hidden" aria-labelledby="footer-heading" id="footer">
+      <footer class="absolute bottom-1 left-0 right-0 w-36 mx-auto hidden" aria-labelledby="footer-heading" ref="footer">
         <h2 id="footer-heading" class="sr-only">Footer</h2>
         <div class="flex justify-center">
           <a class="text-xs leading-5 text-gray-500 dark:text-gray-400 hover:text-indigo-500  "
