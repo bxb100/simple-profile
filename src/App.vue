@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-import Typewriter from 'typewriter-effect/dist/core.js';
+import Typewriter from "typewriter-effect/dist/core";
 
 const el = ref()
 
@@ -34,7 +34,7 @@ function toggleStarField() {
 </script>
 
 <template>
-  <main class="dark:bg-gray-900">
+  <main class="dark:bg-gray-900 select-none">
     <!-- if there no border, the Mac's chrome will display different background color (small opacity diff)-->
     <div id="app" ref="app" class="w-screen h-screen border-2 dark:border-gray-900">
       <section class="text-gray-600 w-full h-full flex content-center items-center body-font">
@@ -127,6 +127,7 @@ function toggleStarField() {
 https://twitter.com/KaAnDK/status/1729149373043610098
 https://codepen.io/amit_merchant/pen/MWPbaVG
  */
+/*noinspection CssUnusedSymbol*/
 #app.show {
   background-size: 100% 100% !important;
   background: url("assets/starfield.svg") no-repeat center;
