@@ -49,7 +49,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="dark:bg-gray-900">
+  <main class="dark:bg-gray-900 select-none">
     <!-- if there no border, the Mac's chrome will display different background color (small opacity diff)-->
     <div id="app" ref="app" class="w-screen h-screen border-2 dark:border-gray-900">
       <section class="text-gray-600 w-full h-full flex content-center items-center body-font">
@@ -96,18 +96,6 @@ onMounted(() => {
   </main>
 </template>
 <style>
-.wave {
-  animation-name: wave-animation;
-  /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;
-  /* Change to speed up or slow down */
-  animation-iteration-count: infinite;
-  /* Never stop waving :) */
-  transform-origin: 70% 70%;
-  /* Pivot around the bottom-left palm */
-  display: inline-block;
-}
-
 @keyframes wave-animation {
   0% {
     transform: rotate(0.0deg)
@@ -148,6 +136,7 @@ onMounted(() => {
 https://twitter.com/KaAnDK/status/1729149373043610098
 https://codepen.io/amit_merchant/pen/MWPbaVG
  */
+/*noinspection CssUnusedSymbol*/
 #app.show {
   background-size: 100% 100% !important;
   background: url("assets/starfield.svg") no-repeat center;
