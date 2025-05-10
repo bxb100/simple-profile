@@ -34,9 +34,9 @@ function toggleStarField() {
 </script>
 
 <template>
-	<main class="dark:bg-gray-900 bg-white select-none overflow-hidden" id="mainContainer">
+	<main class="dark:bg-gray-900 bg-white select-none">
 		<!-- if there no border, the Mac's chrome will display different background color (small opacity diff)-->
-		<div id="app" ref="app" class="w-full h-full border-2 dark:border-gray-900">
+		<div id="app" ref="app" class="w-screen h-screen border-2 dark:border-gray-900">
 			<section class="text-gray-600 w-full h-full flex content-center items-center body-font"
 							 id="appSection">
 				<div class="container px-5 py-24 mx-auto">
@@ -78,9 +78,6 @@ function toggleStarField() {
 	</main>
 </template>
 <style>
-body {
-	overflow: hidden;
-}
 
 .wave {
 	animation-name: wave-animation;
@@ -136,37 +133,8 @@ https://codepen.io/amit_merchant/pen/MWPbaVG
  */
 /*noinspection CssUnusedSymbol*/
 #app.show {
-	position: absolute;
-	background-size: 50% 35% !important;
+	background-size: 100% 60% !important;
 	background: url("assets/starfield.svg") no-repeat center;;
 }
 
-#mainContainer {
-	position: absolute;
-	width: 0;
-	height: 0;
-	overflow: hidden;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	/* 应用动画 */
-	animation-name: expand-and-fill;
-	animation-duration: 1s;
-	animation-timing-function: ease-out;
-	animation-fill-mode: forwards;
-	z-index: 1;
-}
-
-@keyframes expand-and-fill {
-	0% {
-		width: 0;
-		height: 0;
-		opacity: 0;
-	}
-	100% {
-		width: 200vw;
-		height: 200vh;
-		opacity: 1;
-	}
-}
 </style>
