@@ -34,7 +34,7 @@ function toggleStarField() {
 </script>
 
 <template>
-	<main class="dark:bg-gray-900 select-none overflow-hidden" id="mainContainer">
+	<main class="dark:bg-gray-900 bg-white select-none overflow-hidden" id="mainContainer">
 		<!-- if there no border, the Mac's chrome will display different background color (small opacity diff)-->
 		<div id="app" ref="app" class="w-full h-full border-2 dark:border-gray-900">
 			<section class="text-gray-600 w-full h-full flex content-center items-center body-font"
