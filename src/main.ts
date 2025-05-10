@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import Loading from './Loading.vue'
 import './index.css'
 
-createApp(App).mount('#app')
+createApp(Loading).mount('#app')
