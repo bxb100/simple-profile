@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
 import Typewriter from "typewriter-effect/dist/core";
+import { useFavicon, useTitle } from '@vueuse/core';
+
+useTitle("Whoami");
+useFavicon("favicon.svg")
 
 const el = ref()
 

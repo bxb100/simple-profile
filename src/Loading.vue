@@ -20,6 +20,10 @@
 import App from './App.vue'
 import { nextTick, onMounted, onUnmounted, ref, useTemplateRef } from 'vue';
 import * as THREE from 'three';
+import { useFavicon, useTitle } from "@vueuse/core";
+
+useTitle("Hi");
+useFavicon("infinity.png")
 
 // --- Reactive State ---
 const toend = ref(false); // Controls the direction of the animation
